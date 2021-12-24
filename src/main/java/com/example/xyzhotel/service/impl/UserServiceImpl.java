@@ -50,4 +50,10 @@ public class UserServiceImpl implements UserService {
         UserObj userObj=userRepository.findByEmail(email);
         return userObj;
     }
+
+    @Override
+    public UserObj findByEmailAndPassword(String email, String password){
+        UserObj userObj= userRepository.findByEmailAndPassword(email, password);
+        return userObj;
+    }
 }

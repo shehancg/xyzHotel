@@ -9,4 +9,6 @@ public interface UserService {
     public UserObj save(UserObj userObj) throws InvalidUserExecption, ExistingEmailExecption;
 
     public UserObj findByEmail(String email);
+
+    public UserObj findByEmailAndPassword(String email,String password);
 }

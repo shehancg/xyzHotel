@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container text-center">
-    <form action="/hello.html" class="was-validated">
+    <form action="/login" class="was-validated" method="POST">
         <div class="mb-3 mt-3">
             <label for="uname" class="form-label">Enter Email</label>
             <input type="text" class="form-control" id="uname" placeholder="Enter Email" name="email" required>
