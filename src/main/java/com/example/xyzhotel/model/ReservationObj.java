@@ -28,4 +28,60 @@ public class ReservationObj {
 
     @Column(nullable =false,length=10)
     private int noOfGuest;
+
+    public int getReservationId() {
+        return reservationId;
+    }
+
+    public void setReservationId(int reservationId) {
+        this.reservationId = reservationId;
+    }
+
+    public int getResTypeId() {
+        return resTypeId;
+    }
+
+    public void setResTypeId(int resTypeId) {
+        this.resTypeId = resTypeId;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public LocalDate getCheckInDate() {
+        return checkInDate;
+    }
+
+    public void setCheckInDate(LocalDate checkInDate) {
+        this.checkInDate = checkInDate;
+    }
+
+    public LocalDate getCheckOutDate() {
+        return checkOutDate;
+    }
+
+    public void setCheckOutDate(LocalDate checkOutDate) {
+        this.checkOutDate = checkOutDate;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public int getNoOfGuest() {
+        return noOfGuest;
+    }
+
+    public void setNoOfGuest(int noOfGuest) {
+        this.noOfGuest = noOfGuest;
+    }
 }
