@@ -2,6 +2,7 @@ package com.example.xyzhotel.model;
 import javax.persistence.*;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "reservation")
@@ -28,6 +29,10 @@ public class ReservationObj {
 
     @Column(nullable =false,length=10)
     private int noOfGuest;
+
+    @OneToMany(targetEntity = ReservationRoom.class,cascade=CascadeType.ALL)
+    @JoinColumn(name="reservationId",referencedColumnName = "reservationId")
+    private List<ReservationRoom> reservationRooms;
 
     public int getReservationId() {
         return reservationId;
@@ -83,5 +88,13 @@ public class ReservationObj {
 
     public void setNoOfGuest(int noOfGuest) {
         this.noOfGuest = noOfGuest;
+    }
+
+    public List<ReservationRoom> getReservationRooms() {
+        return reservationRooms;
+    }
+
+    public void setReservationRooms(List<ReservationRoom> reservationRooms) {
+        this.reservationRooms = reservationRooms;
     }
 }
